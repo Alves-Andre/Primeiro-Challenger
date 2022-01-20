@@ -1,35 +1,41 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Red Hat Display", sans-serif; /*como importar fonte a partir do link na head do html*/
 }
 .attribution {
-    font-size: 11px;
-    text-align: center;
+    font-size: 11px; /*tamanho da fonte*/
+    text-align: center; /*centralizacao do texto*/
   }
 
 .attribution a {
 color: hsl(228, 45%, 44%);
 }
 #corpo {
-    top: 50%;
+    top: 50%; /*distancia do container até o topo da página*/
     background-color: white;
     width: 338px;
     height: 550px;
     border-radius: 15px;
     left: 50%;
-    transform: translate(-50%, -50%); /* primeiro valor referente ao eixo X e segundo ao eixo Y*/
-    position: absolute;
+    transform: translate(-50%, -50%); /* primeiro valor referente ao eixo X e segundo ao eixo Y/ 
+    move quando negativo para a esquerda e positivo para a direita o valor do container
+    usado para centralizar percentualmente elementos*/
+    position: absolute; /*cria uma camada própria e sua posicao é relacionada a todo o container
+    que ele está inserido*/
 }
 
 #fundo {
     background-image: url('../images/pattern-background-desktop.svg');
-    background-repeat: no-repeat;
-    background-size:100%;
+    background-repeat: no-repeat; /*não repetir a imagem de fundo da página*/
+    background-size:100%; /* a largura está configurada para ser 100% grande 
+    e a altura da imagem de fundo segue respeitando a proporção da imagem.
+    background-size:cover;significa que a imagem de fundo sempre caberá no 
+    todo div, você não ficará com nenhum ponto vazio em seu div
+    */
 }
 body{
     background-color: #e1e9ff;
-    background-image: url();
 }
 img {
     width: 338px;
@@ -44,7 +50,7 @@ img {
     margin-top: 30px;
     font-size: 25px;
 }
-p:nth-child(2) {
+p:nth-child(2) { /*serve para selecionar a segunda tag P da página (nesse contexo)*/
     margin-top: 15px;
     font-size: 15px;
 }
@@ -101,8 +107,8 @@ p:nth-child(2) {
 }
 #botao a {
     position: absolute;
-    text-decoration: none;
-    white-space : nowrap;
+    text-decoration: none; /*serve para eliminar sublinhado e outras características do texto*/
+    white-space: nowrap; /*trata o espaço: notwrap=mesma linha/ normal=normal/ pre=quebra de linha*/
     color: hsl(225, 100%, 98%);
     left: 50%;
     transform: translateX(-50%);
