@@ -14,8 +14,8 @@ color: hsl(228, 45%, 44%);
 #corpo {
     top: 50%; /*distancia do container até o topo da página*/
     background-color: white;
-    width: 338px;
-    height: 550px;
+    width: 400px;
+    height: 600px;
     border-radius: 15px;
     left: 50%;
     transform: translate(-50%, -50%); /* primeiro valor referente ao eixo X e segundo ao eixo Y/ 
@@ -23,6 +23,7 @@ color: hsl(228, 45%, 44%);
     usado para centralizar percentualmente elementos*/
     position: absolute; /*cria uma camada própria e sua posicao é relacionada a todo o container
     que ele está inserido*/
+    box-shadow: 0 0 10px hsl(225, 100%, 94%);
 }
 
 #fundo {
@@ -38,8 +39,8 @@ body{
     background-color: #e1e9ff;
 }
 img {
-    width: 338px;
-    height: 165px;
+    width: 400px;
+    height: 200px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -49,16 +50,23 @@ img {
 #informacoes h3:first-child {
     margin-top: 30px;
     font-size: 25px;
+    color:hsl(223, 47%, 23%);
 }
 p:nth-child(2) { /*serve para selecionar a segunda tag P da página (nesse contexo)*/
+    position: relative;
     margin-top: 15px;
-    font-size: 15px;
+    font-size: 16px;
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    line-height: 20px
 }
 #detalhes {
-    border: solid 2px;
     border-radius: 10px;
-    width: 236px;
-    height: 60px;
+    width: 80%;
+    height: 80px;
     left: 50%;
     transform: translate(-50%);
     margin-top: 30px;
@@ -66,37 +74,38 @@ p:nth-child(2) { /*serve para selecionar a segunda tag P da página (nesse conte
     background-color: hsl(225, 100%, 98%);
 }
 #detalhes img {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     left: 12.5px;
     position: absolute;
-    margin-top: 12.5px;
-}
-#botao {
-    position: absolute;
-    margin-top: 120px;
-    margin-bottom: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 #detalhes h4 {
     position: absolute;
-    font-size: 15px;
-    margin-top: 12.5px;
-    left: 60px;
+    font-size: 16px;
+    top: 20px;
+    left: 22%;
+    color: hsl(223, 47%, 23%);
 }
 #detalhes p:nth-child(3) {
     position: absolute;
-    margin-top: 35px;
-    left: 60px;
+    top: 45px;
+    left: 22%;
     color: hsl(224, 23%, 55%);
+    font-size: 15px;
 }
 #detalhes a {
     position: absolute;
     right: 10px;
-    margin-top: 20px;
     font-size: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 #botao {
     position: absolute;
+    margin-top: 140px;
+    margin-bottom: 30px;
     width: 280px;
     height: 40px;
     background-color: hsl(245, 75%, 52%);
@@ -104,6 +113,7 @@ p:nth-child(2) { /*serve para selecionar a segunda tag P da página (nesse conte
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    box-shadow: 0 10px 10px hsl(225, 100%, 94%);
 }
 #botao a {
     position: absolute;
@@ -113,17 +123,30 @@ p:nth-child(2) { /*serve para selecionar a segunda tag P da página (nesse conte
     left: 50%;
     transform: translateX(-50%);
     margin-top: 12px;
-    font-size: 14px;
+    font-size: 13px;
 }
 #cancelar {
     position: absolute;
     text-align: center;
     height: 50px;
-    margin-top: 200px;
+    margin-top: 210px;
     left: 50%;
     transform: translateX(-50%);
 }
 #cancelar a {
     text-decoration: none;
     color: hsl(224, 23%, 55%);
+    font-size: 15px;
+}
+
+/*Efeitos*/
+#detalhes a:hover {
+    text-decoration: none;
+    opacity: 70%;
+}
+#botao:hover {
+    opacity: 70%;
+}
+#cancelar a:hover {
+    color: hsl(223, 47%, 23%);
 }
